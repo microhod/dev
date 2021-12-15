@@ -16,12 +16,9 @@ echo -e "\n--- terminal ---\n"
 echo "install ayu theme"
 mkdir -p ~/.config/iterm2-themes
 curl -s https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/ayu.itermcolors > ~/.config/iterm2-themes/ayu.itermcolors
-echo "install fisher"
-curl -s https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish > /dev/null
-echo "install pure plugin"
-fish -c fisher install rafaelrinaldi/pure > /dev/null
-echo "install ayu theme"
-fish -c fisher install edouard-lopez/ayu-theme.fish > /dev/null
+
+echo -e "\n--- fish shell ---\n"
+./fish.sh
 
 echo -e "\n--- ssh ---\n"
 
