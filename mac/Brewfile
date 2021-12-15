@@ -1,3 +1,6 @@
+tap "homebrew/cask-drivers"
+# utilities (no sha)
+cask "logitech-options"
 # set arguments for all 'brew install --cask' commands
 cask_args appdir: "~/Applications", require_sha: true
 # terminal
@@ -7,4 +10,6 @@ brew "fish"
 # only install vscode if not already installed (as it auto-updates itself)
 cask "visual-studio-code" unless system "test -f /usr/local/bin/code"
 brew "go"
+brew "kubectl" unless system "test -f /usr/local/bin/kubectl"
+brew "helm" unless system "test -f /usr/local/bin/helm"
 cask "postman"
