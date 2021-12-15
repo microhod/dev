@@ -1,15 +1,19 @@
 tap "homebrew/cask-drivers"
-# utilities (no sha)
+# package with no sha signature
 cask "logitech-options"
-# set arguments for all 'brew install --cask' commands
-cask_args appdir: "~/Applications", require_sha: true
+cask "google-cloud-sdk"
+# enforce sha signature for the following packages
+cask_args require_sha: true
 # terminal
 cask "iterm2"
 brew "fish"
+# languages
+brew "go"
+brew "python"
 # dev tools
 # only install vscode if not already installed (as it auto-updates itself)
 cask "visual-studio-code" unless system "test -f /usr/local/bin/code"
-brew "go"
+brew "gnupg"
 brew "kubectl" unless system "test -f /usr/local/bin/kubectl"
 brew "helm" unless system "test -f /usr/local/bin/helm"
 cask "postman"
