@@ -1,0 +1,10 @@
+# set arguments for all 'brew install --cask' commands
+cask_args appdir: "~/Applications", require_sha: true
+# terminal
+cask "iterm2"
+brew "fish"
+# dev tools
+# only install vscode if not already installed (as it auto-updates itself)
+cask "visual-studio-code" unless system "test -f /usr/local/bin/code"
+brew "go"
+cask "postman"
