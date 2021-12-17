@@ -51,6 +51,9 @@ else
     echo "~/.gnupg/gpg.conf no-tty already set"
 fi
 
+echo "restart gpg-agent"
+gpgconf --kill gpg-agent
+
 if [ ! -z "${gpg_id}" ]
 then
     echo "run 'gpg --export --armor ${gpg_id}' to export the key for use in github etc"
