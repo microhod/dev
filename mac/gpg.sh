@@ -30,6 +30,9 @@ else
     echo "commit signing already set up with GPG key: ${gpg_id}"
 fi
 
+# Credit for git gpg configuration:
+# https://gist.github.com/danieleggert/b029d44d4a54b328c0bac65d46ba4c65
+
 echo "setting git gpg program to GPG Keychain version"
 git config --global gpg.program /usr/local/MacGPG2/bin/gpg2
 
