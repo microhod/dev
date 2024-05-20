@@ -1,18 +1,23 @@
 tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
 # package with no sha signature
-cask "logitech-options"
+cask "logi-options-plus"
 cask "google-cloud-sdk"
 # enforce sha signature for the following packages
 cask_args require_sha: true
 # terminal
 cask "iterm2"
 brew "fish"
+cask "font-sauce-code-pro-nerd-font"
 # languages
 brew "go"
 brew "python"
+brew "elixir"
 # dev tools
 # only install vscode if not already installed (as it auto-updates itself)
 cask "visual-studio-code" unless system "test -f /usr/local/bin/code"
+brew "neovim"
+brew "ripgrep"
 brew "gnupg"
 cask "gpg-suite"
 brew "kubectl" unless system "test -f /usr/local/bin/kubectl"
